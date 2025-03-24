@@ -1,1 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault - Play Hextris | Free Online HTML5 Games</title>
+    <meta name="description" content="Play Hextris online for free at GameVault. Challenge yourself with this addictive hexagonal puzzle game that tests your reflexes and strategy.">
+    <link rel="canonical" href="https://gamevault.mom/hextris">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            gray: '#F5F5F7',
+                            darkgray: '#86868B',
+                            black: '#1D1D1F',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        .game-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .game-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+        }
+        @media (max-width: 640px) {
+            .game-container iframe {
+                height: 450px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-apple-gray text-apple-black">
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-apple-blue flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                </svg>
+                GameVault
+            </a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="/" class="hover:text-apple-blue transition">Home</a></li>
+                    <li><a href="/games" class="hover:text-apple-blue transition">Games</a></li>
+                    <li><a href="/categories" class="hover:text-apple-blue transition">Categories</a></li>
+                    <li><a href="/about" class="hover:text-apple-blue transition">About</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
 
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">Hextris</h1>
+            <p class="text-xl text-apple-darkgray text-center mb-8">A fast-paced puzzle game based on hexagonal shapes that will challenge your reflexes and strategy.</p>
+            
+            <div class="game-container">
+                <iframe src="https://hextris.io/" width="800" height="600" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="mb-12 max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4">How to Play Hextris</h2>
+            <p class="mb-4">Hextris is an addictive puzzle game where you rotate a hexagon to match colors and prevent blocks from reaching the center. The game gets progressively faster and more challenging as your score increases.</p>
+            
+            <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                <h3 class="font-semibold mb-2">Game Controls:</h3>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Use the left and right arrow keys to rotate the hexagon</li>
+                    <li>Match three or more blocks of the same color to clear them</li>
+                    <li>Prevent blocks from reaching the center of the hexagon</li>
+                    <li>The game ends when blocks stack up to the center</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-12 max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4">About Hextris</h2>
+            <p class="mb-4">Hextris is an open-source HTML5 game created by a team of developers as a modern twist on the classic Tetris concept. Instead of the traditional grid, Hextris uses a hexagonal playing field that creates unique gameplay mechanics and challenges.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h2 class="text-xl font-bold mb-2">Game Features</h2>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Unique hexagonal gameplay</li>
+                        <li>Increasing difficulty</li>
+                        <li>Color-matching mechanics</li>
+                        <li>Score tracking system</li>
+                        <li>Responsive design for all devices</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h2 class="text-xl font-bold mb-2">Why Players Love It</h2>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Simple yet addictive gameplay</li>
+                        <li>Perfect for quick gaming sessions</li>
+                        <li>Challenges both reflexes and strategy</li>
+                        <li>Minimalist design with vibrant colors</li>
+                        <li>No download required - play instantly</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4">More Games Like Hextris</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="/games/tetris" class="block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="h-32 bg-blue-100 flex items-center justify-center">
+                        <span class="text-xl font-bold">Tetris</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-medium">Classic Tetris</h3>
+                    </div>
+                </a>
+                <a href="/games/2048" class="block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="h-32 bg-yellow-100 flex items-center justify-center">
+                        <span class="text-xl font-bold">2048</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-medium">Number Puzzle</h3>
+                    </div>
+                </a>
+                <a href="/games/hexagon" class="block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="h-32 bg-green-100 flex items-center justify-center">
+                        <span class="text-xl font-bold">Hexagon</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-medium">Super Hexagon</h3>
+                    </div>
+                </a>
+                <a href="/games/puzzle" class="block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="h-32 bg-purple-100 flex items-center justify-center">
+                        <span class="text-xl font-bold">Puzzles</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-medium">More Puzzles</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-apple-black text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">GameVault</h3>
+                    <p class="text-apple-darkgray">Your destination for free online HTML5 games. Play instantly without downloads or installations.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-apple-darkgray hover:text-white transition">Home</a></li>
+                        <li><a href="/games" class="text-apple-darkgray hover:text-white transition">All Games</a></li>
+                        <li><a href="/categories" class="text-apple-darkgray hover:text-white transition">Categories</a></li>
+                        <li><a href="/about" class="text-apple-darkgray hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/privacy" class="text-apple-darkgray hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="/terms" class="text-apple-darkgray hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="/contact" class="text-apple-darkgray hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-800 text-center text-apple-darkgray">
+                <p>&copy; 2023 GameVault.mom - All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to handle mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('block');
+        });
+    </script>
+</body>
+</html>
