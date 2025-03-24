@@ -1,10 +1,146 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>测试 Game 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏2 - 我的游戏网站</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --apple-blue: #0071e3;
+            --apple-gray: #f5f5f7;
+            --apple-dark: #1d1d1f;
+            --apple-light: #ffffff;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--apple-gray);
+            color: var(--apple-dark);
+        }
+        
+        .apple-btn {
+            background-color: var(--apple-blue);
+            border-radius: 20px;
+            padding: 8px 20px;
+            color: white;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .apple-btn:hover {
+            background-color: #0062c3;
+            transform: scale(1.02);
+        }
+        
+        .game-container {
+            background-color: var(--apple-light);
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .header-gradient {
+            background: linear-gradient(135deg, #42a1ec 0%, #0070c9 100%);
+            color: white;
+        }
+        
+        @media (max-width: 640px) {
+            .game-iframe {
+                height: 300px !important;
+            }
+        }
+    </style>
 </head>
-<body>
-    <h1>Game 2 页面测试成功！</h1>
+<body class="min-h-screen">
+    <header class="header-gradient py-6 px-4 sm:px-8 mb-8">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold">游戏2</span>
+            </div>
+            <nav>
+                <button class="apple-btn">返回主页</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-8 pb-16">
+        <section class="mb-12 text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4">Switchblade</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">A fast-paced action game where you master the art of switching between different abilities to overcome challenges.</p>
+        </section>
+
+        <section class="game-container p-4 mb-12 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Play Switchblade Online</h2>
+            <div class="game-iframe-container relative overflow-hidden rounded-lg">
+                <iframe width="100%" height="600" class="game-iframe" frameborder="0" src="https://itch.io/embed/3289244"><a href="https://rubic.itch.io/switchblade">Switchblade by rubic, torcado, ShyCryptid, Camelot, keestak</a></iframe>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
+            <div class="game-container p-6">
+                <h2 class="text-2xl font-bold mb-3">Game Overview</h2>
+                <p class="mb-4">Switchblade is an innovative action game that challenges players to master the art of switching between different abilities. Navigate through increasingly difficult levels while adapting your strategy on the fly.</p>
+                <p>Developed by a talented team including rubic, torcado, ShyCryptid, Camelot, and keestak, this game offers hours of engaging gameplay with its unique mechanics.</p>
+            </div>
+            
+            <div class="game-container p-6">
+                <h2 class="text-2xl font-bold mb-3">How to Play</h2>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Use WASD or arrow keys to move your character</li>
+                    <li>Press Space to jump and double-jump</li>
+                    <li>Use number keys 1-4 to switch between different abilities</li>
+                    <li>Each ability has unique strengths - learn when to use each one</li>
+                    <li>Collect power-ups to enhance your abilities</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="game-container p-6 mb-12 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-3">Game Features</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Multiple Abilities</h3>
+                    <p>Switch between four unique abilities, each with different strengths and weaknesses.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Challenging Levels</h3>
+                    <p>Test your skills across progressively difficult stages that require quick thinking.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Original Soundtrack</h3>
+                    <p>Enjoy an immersive gaming experience with custom-composed music.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Browser-Based</h3>
+                    <p>No downloads required - play instantly in your browser on any device.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center max-w-2xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4">More from GameVault</h2>
+            <p class="mb-6">Discover our collection of carefully curated browser games. GameVault brings you the best online gaming experience without downloads or installations.</p>
+            <button class="apple-btn">Explore Our Collection</button>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 px-4 mt-12">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="font-bold text-xl">游戏2</p>
+                    <p class="text-sm text-gray-400">© 2023 GameVault. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-300 hover:text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
