@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>游戏 2 - 我的游戏网站</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         :root {
             --apple-blue: #0071e3;
@@ -19,6 +18,10 @@
             color: var(--apple-dark);
             margin: 0;
             padding: 0;
+        }
+
+        .min-h-screen {
+            min-height: 100vh;
         }
 
         .container {
@@ -57,10 +60,6 @@
             color: white;
         }
 
-        .min-h-screen {
-            min-height: 100vh;
-        }
-
         .py-6 {
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
@@ -69,6 +68,11 @@
         .px-4 {
             padding-left: 1rem;
             padding-right: 1rem;
+        }
+
+        .sm\:px-8 {
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
 
         .mb-8 {
@@ -116,6 +120,10 @@
             font-size: 2.25rem;
         }
 
+        .sm\:text-5xl {
+            font-size: 3rem;
+        }
+
         .mb-4 {
             margin-bottom: 1rem;
         }
@@ -140,6 +148,10 @@
             max-width: 56rem;
         }
 
+        .max-w-2xl {
+            max-width: 42rem;
+        }
+
         .relative {
             position: relative;
         }
@@ -156,8 +168,24 @@
             display: grid;
         }
 
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .md\:grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .sm\:grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
         .gap-8 {
             gap: 2rem;
+        }
+
+        .gap-4 {
+            gap: 1rem;
         }
 
         .p-6 {
@@ -180,16 +208,16 @@
             margin-top: 0.5rem;
         }
 
-        .gap-4 {
-            gap: 1rem;
-        }
-
         .mb-2 {
             margin-bottom: 0.5rem;
         }
 
         .mb-6 {
             margin-bottom: 1.5rem;
+        }
+
+        .font-semibold {
+            font-weight: 600;
         }
 
         .bg-gray-800 {
@@ -217,6 +245,18 @@
             color: #cbd5e0;
         }
 
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .md\:flex-row {
+            flex-direction: row;
+        }
+
+        .md\:mb-0 {
+            margin-bottom: 0;
+        }
+
         .space-x-4 > * + * {
             margin-left: 1rem;
         }
@@ -227,6 +267,12 @@
 
         .hover\:text-white:hover {
             color: white;
+        }
+
+        @media (max-width: 640px) {
+            .game-iframe {
+                height: 300px !important;
+            }
         }
 
         @media (min-width: 640px) {
@@ -257,20 +303,6 @@
                 margin-bottom: 0;
             }
         }
-
-        @media (max-width: 640px) {
-            .game-iframe {
-                height: 300px !important;
-            }
-        }
-
-        .flex-col {
-            flex-direction: column;
-        }
-
-        .grid-cols-1 {
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -280,7 +312,7 @@
                 <span class="text-2xl font-bold">游戏 2</span>
             </div>
             <nav>
-                <button class="apple-btn" onclick="window.location.href='/'">返回主页</button>
+                <a href="../index.html" class="apple-btn">返回主页</a>
             </nav>
         </div>
     </header>
@@ -294,10 +326,7 @@
         <section class="game-container p-4 mb-12 max-w-4xl mx-auto">
             <h2 class="text-2xl font-bold mb-4">Play Switchblade Online</h2>
             <div class="game-iframe-container relative overflow-hidden rounded-lg">
-                <!-- 修改后的游戏嵌入代码 -->
-                <iframe frameborder="0" src="https://rubic.itch.io/switchblade/embed" width="100%" height="600">
-                    <a href="https://rubic.itch.io/switchblade">Play Switchblade on itch.io</a>
-                </iframe>
+                <iframe width="100%" height="600" class="game-iframe" frameborder="0" src="https://rubic.itch.io/switchblade/embed" allowfullscreen><a href="https://rubic.itch.io/switchblade">Switchblade by rubic, torcado, ShyCryptid, Camelot, keestak</a></iframe>
             </div>
         </section>
 
@@ -345,7 +374,7 @@
         <section class="text-center max-w-2xl mx-auto">
             <h2 class="text-2xl font-bold mb-4">More from GameVault</h2>
             <p class="mb-6">Discover our collection of carefully curated browser games. GameVault brings you the best online gaming experience without downloads or installations.</p>
-            <button class="apple-btn" onclick="window.location.href='/'">Explore Our Collection</button>
+            <a href="../index.html" class="apple-btn">Explore Our Collection</a>
         </section>
     </main>
 
@@ -364,12 +393,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // 简单的脚本以确保按钮功能正常
-        document.addEventListener('DOMContentLoaded', function() {
-            // 如果需要任何JavaScript功能，可以在这里添加
-        });
-    </script>
 </body>
 </html>
